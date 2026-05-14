@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swytch | Order Success</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <button class="nav-icon" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="index.html" class="logo">SWYTCH</a>
+    </div>
+  </nav>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  
+  <!-- Slide-in Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="close-btn" id="close-menu"><i class="fas fa-times"></i></button>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="shop.html"><i class="fas fa-shopping-bag"></i> Shop</a>
+    <a href="styles.html"><i class="fas fa-magic"></i> Aesthetics</a>
+    <a href="wishlist.html"><i class="far fa-heart"></i> Wishlist</a>
+    <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+    <a href="orders.html"><i class="fas fa-box"></i> My Orders</a>
+    <a href="track.html"><i class="fas fa-map-marker-alt"></i> Track My Order</a>
+    <a href="login.html"><i class="fas fa-user"></i> Login</a>
+  </div>
+
+  <div class="container fade-in" style="margin-top: 100px; margin-bottom: 80px; text-align: center;">
+    <div class="checkout-container" style="margin-top: 0;">
+      <div class="success-checkmark">
+        <i class="fas fa-check"></i>
+      </div>
+      <h1 style="margin-bottom: 10px;">Order Confirmed</h1>
+      <p style="color:var(--text-secondary); margin-bottom: 30px;">Your order has been successfully placed.</p>
+      
+      <div style="background-color: var(--bg-color); padding: 20px; border-radius: var(--radius); margin-bottom: 30px; text-align: left;">
+        <p><strong>Order ID:</strong> <span id="success-order-id">SWY-XXXX</span></p>
+        <p><strong>Estimated Delivery:</strong> <span id="success-date">MM/DD/YYYY</span></p>
+      </div>
+
+      <div style="display: flex; gap: 15px; justify-content: center;">
+        <a href="track.html" class="btn-primary" style="flex: 1;">Track Order</a>
+        <a href="shop.html" class="btn-secondary" style="flex: 1;">Continue Shopping</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">SWYTCH</div>
+    <p>&copy; 2026 Swytch. All rights reserved.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

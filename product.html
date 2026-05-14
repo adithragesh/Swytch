@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swytch | Product</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <button class="nav-icon" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="index.html" class="logo">SWYTCH</a>
+    </div>
+    <div class="nav-right">
+      <a href="wishlist.html" class="nav-icon cart-icon">
+        <i class="far fa-heart"></i>
+        <span class="cart-count" style="display:none">0</span>
+      </a>
+      <a href="cart.html" class="nav-icon cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" style="display:none">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  
+  <!-- Slide-in Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="close-btn" id="close-menu"><i class="fas fa-times"></i></button>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="shop.html"><i class="fas fa-shopping-bag"></i> Shop</a>
+    <a href="styles.html"><i class="fas fa-magic"></i> Aesthetics</a>
+    <a href="wishlist.html"><i class="far fa-heart"></i> Wishlist</a>
+    <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+    <a href="orders.html"><i class="fas fa-box"></i> My Orders</a>
+    <a href="track.html"><i class="fas fa-map-marker-alt"></i> Track My Order</a>
+    <a href="login.html"><i class="fas fa-user"></i> Login</a>
+  </div>
+
+  <div class="container product-detail">
+    <img src="https://images.unsplash.com/photo-1550614000-4b95d4ed1bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Product Name" class="detail-image">
+    
+    <div class="detail-info">
+      <div class="product-tags" style="margin-bottom: 15px;">
+        <span class="product-tag">Women</span>
+        <span class="product-tag">Minimalist</span>
+      </div>
+      <h1>Minimalist Trench Coat</h1>
+      <p class="detail-price">$120.00</p>
+      
+      <p class="mb-20">A timeless essential piece featuring an oversized fit, dropped shoulders, and a clean minimalist silhouette. Perfect for layering during transitional weather.</p>
+      
+      <h4>Size</h4>
+      <div class="size-selector mt-20">
+        <div class="size-btn">S</div>
+        <div class="size-btn active">M</div>
+        <div class="size-btn">L</div>
+        <div class="size-btn">XL</div>
+      </div>
+      
+      <div class="detail-actions mt-40">
+        <button class="btn-primary" onclick="addToCart(4)">Add to Cart</button>
+        <button class="btn-secondary" onclick="toggleWishlist(4, this)"><i class="far fa-heart"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="margin-top: 80px;">
+    <div class="footer-logo">SWYTCH</div>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+      <a href="#">FAQ</a>
+      <a href="#">Shipping</a>
+    </div>
+    <p>&copy; 2026 Swytch. All rights reserved.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

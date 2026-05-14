@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swytch | Payment</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <button class="nav-icon" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="index.html" class="logo">SWYTCH</a>
+    </div>
+  </nav>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  
+  <!-- Slide-in Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="close-btn" id="close-menu"><i class="fas fa-times"></i></button>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="shop.html"><i class="fas fa-shopping-bag"></i> Shop</a>
+    <a href="styles.html"><i class="fas fa-magic"></i> Aesthetics</a>
+    <a href="wishlist.html"><i class="far fa-heart"></i> Wishlist</a>
+    <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+    <a href="orders.html"><i class="fas fa-box"></i> My Orders</a>
+    <a href="track.html"><i class="fas fa-map-marker-alt"></i> Track My Order</a>
+    <a href="login.html"><i class="fas fa-user"></i> Login</a>
+  </div>
+
+  <div class="container checkout-container fade-in">
+    <div class="checkout-step">
+      <h2>Payment Method</h2>
+      
+      <div class="payment-method active" onclick="selectPayment(this)">
+        <input type="radio" name="payment" checked>
+        <i class="fas fa-credit-card"></i>
+        <div>
+          <h4>Credit / Debit Card</h4>
+          <p style="font-size:12px; color:var(--text-secondary)">Visa, MasterCard, Amex</p>
+        </div>
+      </div>
+      
+      <div class="payment-method" onclick="selectPayment(this)">
+        <input type="radio" name="payment">
+        <i class="fab fa-paypal"></i>
+        <div>
+          <h4>PayPal</h4>
+          <p style="font-size:12px; color:var(--text-secondary)">Fast and secure</p>
+        </div>
+      </div>
+
+      <div class="payment-method" onclick="selectPayment(this)">
+        <input type="radio" name="payment">
+        <i class="fas fa-mobile-alt"></i>
+        <div>
+          <h4>UPI</h4>
+          <p style="font-size:12px; color:var(--text-secondary)">Google Pay, PhonePe, Paytm</p>
+        </div>
+      </div>
+
+      <div class="payment-method" onclick="selectPayment(this)">
+        <input type="radio" name="payment">
+        <i class="fas fa-money-bill-wave"></i>
+        <div>
+          <h4>Cash on Delivery</h4>
+          <p style="font-size:12px; color:var(--text-secondary)">Pay when you receive</p>
+        </div>
+      </div>
+
+      <button id="complete-payment" class="btn-primary" style="width: 100%; padding: 18px; font-size: 18px; margin-top: 20px;">Complete Payment</button>
+    </div>
+  </div>
+
+  <div class="processing-overlay" id="processing-overlay">
+    <div class="spinner"></div>
+    <h3 style="color:white; letter-spacing: 2px;">PROCESSING PAYMENT</h3>
+    <p style="color:var(--text-secondary); margin-top: 10px;">Please do not close this window</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">SWYTCH</div>
+    <p>&copy; 2026 Swytch. All rights reserved.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    function selectPayment(el) {
+      document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('active'));
+      el.classList.add('active');
+      el.querySelector('input').checked = true;
+    }
+  </script>
+</body>
+</html>
